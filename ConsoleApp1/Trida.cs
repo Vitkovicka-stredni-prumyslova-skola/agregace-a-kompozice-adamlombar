@@ -15,7 +15,7 @@ public class Trida
 
         Nazev = nazev.Trim();
 
-        TridniKniha = new TridniKniha(this);
+        TridniKniha = new TridniKniha();
 
     }
 
@@ -36,7 +36,16 @@ public class Trida
 
     public void VypisStudenty()
     {
-        // TODO
+        Console.WriteLine($"Třída: {Nazev}");
+        if (Studenti.Count == 0)
+        {
+            Console.WriteLine("Žádní studenti.");
+            return;
+        }
+        foreach (var student in Studenti)
+        {
+            Console.WriteLine(student);
+        }
     }
 }
 }
